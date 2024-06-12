@@ -48,6 +48,7 @@ class _VideoInfoState extends State<VideoInfo> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
         body: Container(
       decoration: _playArea == false
           ? BoxDecoration(
@@ -187,12 +188,14 @@ class _VideoInfoState extends State<VideoInfo> {
                                   ),
                                   Container(
                                     width: 300,
-                                    child: Text(
-                                      "Resistent Band Kattelbell",
-                                      style: TextStyle(
-                                        fontSize: 15,
-                                        color:
-                                            color.AppColor.secondPageTitleColor,
+                                    child: Expanded(
+                                      child: Text(
+                                        "Resistent Band Kattelbell",
+                                        style: TextStyle(
+                                          fontSize: 15,
+                                          color:
+                                              color.AppColor.secondPageTitleColor,
+                                        ),
                                       ),
                                     ),
                                   ),
